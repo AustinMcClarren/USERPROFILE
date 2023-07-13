@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Collection Survey</title>
+</head>
+<body>
+    <h1>Data Collection Survey</h1>
+    <form action="/survey" method="POST">
+        <h2>Demographic Questions</h2>
+        <p>1. What is your age range?</p>
+        <select name="age_range">
+            <option value="18-24">18-24</option>
+            <option value="25-34">25-34</option>
+            <option value="35-44">35-44</option>
+            <option value="45-54">45-54</option>
+            <option value="55-64">55-64</option>
+            <option value="65 or above">65 or above</option>
+        </select>
+
+        <p>2. What is your gender?</p>
+        <select name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Non-binary">Non-binary</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+        </select>
+
+        <p>3. What is your household size?</p>
+        <select name="household_size">
+            <option value="1 person">1 person</option>
+            <option value="2 persons">2 persons</option>
+            <option value="3 persons">3 persons</option>
+            <option value="4 persons">4 persons</option>
+            <option value="5 or more persons">5 or more persons</option>
+        </select>
+
+        <p>4. How many rooms are there in your house?</p>
+        <select name="num_rooms">
+            <option value="1 room">1 room</option>
+            <option value="2 rooms">2 rooms</option>
+            <option value="3 rooms">3 rooms</option>
+            <option value="4 rooms">4 rooms</option>
+        </select>
+
+        <p>5. How many people live in each room?</p>
+        <select name="num_people_per_room">
+            <option value="1 person">1 person</option>
+            <option value="2 persons">2 persons</option>
+            <option value="3 persons">3 persons</option>
+            <option value="4 persons">4 persons</option>
+        </select>
+
+        <p>6. What is your educational level?</p>
+        <select name="education_level">
+            <option value="Less than high school">Less than high school</option>
+            <option value="High school graduate">High school graduate</option>
+            <option value="Some college or technical training">Some college or technical training</option>
+            <option value="Bachelor's degree">Bachelor's degree</option>
+            <option value="Master's degree or higher">Master's degree or higher</option>
+        </select>
+
+        <p>7. What is your annual household income?</p>
+        <select name="annual_income">
+            <option value="Less than $20,000">Less than $20,000</option>
+            <option value="$20,000-$35,000">$20,000-$35,000</option>
+            <option value="$35,000-$50,000">$35,000-$50,000</option>
+            <option value="$50,000-$75,000">$50,000-$75,000</option>
+            <option value="$75,000-$100,000">$75,000-$100,000</option>
+            <option value="$100,000 or above">$100,000 or above</option>
+        </select>
+
+        <p>8. What is your ethnic or racial background?</p>
+        <select name="ethnic_background">
+            <option value="White/Caucasian">White/Caucasian</option>
+            <option value="Black/African American">Black/African American</option>
+            <option value="Hispanic/Latinx">Hispanic/Latinx</option>
+            <option value="Asian/Pacific Islander">Asian/Pacific Islander</option>
+            <option value="Native American/Indigenous">Native American/Indigenous</option>
+            <option value="Other">Other (specify)</option>
+        </select>
+
+        <p>9. What is your primary language spoken at home?</p>
+        <select name="primary_language">
+            <option value="English">English</option>
+            <option value="Spanish">Spanish</option>
+            <option value="Mandarin Chinese">Mandarin Chinese</option>
+            <option value="Arabic">Arabic</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Other">Other (specify)</option>
+        </select>
+
+        <p>10. Do you or any member of your household have any disabilities?</p>
+        <select name="disabilities">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <p>11. What is your employment status?</p>
+        <select name="employment_status">
+            <option value="Employed full-time">Employed full-time</option>
+            <option value="Employed part-time">Employed part-time</option>
+            <option value="Unemployed">Unemployed</option>
+            <option value="Self-employed">Self-employed</option>
+            <option value="Retired">Retired</option>
+            <option value="Student">Student</option>
+        </select>
+
+        <p>12. Do you currently receive any government assistance programs?</p>
+        <select name="government_assistance">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <!-- Housing-related Questions -->
+        <h2>Housing-related Questions</h2>
+        <p>1. How long have you lived in your current home?</p>
+        <select name="years_in_current_home">
+            <option value="Less than a year">Less than a year</option>
+            <option value="1-5 years">1-5 years</option>
+            <option value="6-10 years">6-10 years</option>
+            <option value="11-15 years">11-15 years</option>
+            <option value="16 years or more">16 years or more</option>
+        </select>
+
+        <p>2. What type of housing do you live in?</p>
+        <select name="housing_type">
+            <option value="Single-family house">Single-family house</option>
+            <option value="Apartment or condominium">Apartment or condominium</option>
+            <option value="Townhouse">Townhouse</option>
+            <option value="Mobile home">Mobile home</option>
+            <option value="Other">Other (specify)</option>
+        </select>
+
+        <p>3. Are you the homeowner or a renter?</p>
+        <select name="homeowner_or_renter">
+            <option value="Homeowner">Homeowner</option>
+            <option value="Renter">Renter</option>
+        </select>
+
+        <p>4. Is your home in need of repairs or renovations?</p>
+        <select name="repairs_or_renovations">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Unsure">Unsure</option>
+        </select>
+
+        <p>5. Are you interested in improving the energy efficiency of your home?</p>
+        <select name="interest_in_energy_efficiency">
+            <option value="Yes, very interested">Yes, very interested</option>
+            <option value="Somewhat interested">Somewhat interested</option>
+            <option value="Not interested">Not interested</option>
+        </select>
+
+        <p>6. Are you aware of any existing renewable energy programs or initiatives in your community?</p>
+        <select name="awareness_of_renewable_energy_programs">
+            <option value="Yes, I am aware">Yes, I am aware</option>
+            <option value="No, I am not aware">No, I am not aware</option>
+        </select>
+
+        <p>7. What are your primary concerns or barriers when it comes to accessing clean energy technologies or home remodeling?</p>
+        <select name="concerns_or_barriers">
+            <option value="Cost">Cost</option>
+            <option value="Lack of information">Lack of information</option>
+            <option value="Lack of resources">Lack of resources</option>
+            <option value="Trustworthiness of providers">Trustworthiness of providers</option>
+            <option value="Other">Other (specify)</option>
+        </select>
+
+        <p>8. How would you rate the overall condition of your home?</p>
+        <select name="home_condition">
+            <option value="Excellent">Excellent</option>
+            <option value="Good">Good</option>
+            <option value="Fair">Fair</option>
+            <option value="Poor">Poor</option>
+        </select>
+
+        <p>9. What is the approximate square footage of your home?</p>
+        <select name="square_footage">
+            <option value="Less than 1,000 sq. ft.">Less than 1,000 sq. ft.</option>
+            <option value="1,000-1,500 sq. ft.">1,000-1,500 sq. ft.</option>
+            <option value="1,500-2,000 sq. ft.">1,500-2,000 sq. ft.</option>
+            <option value="2,000-2,500 sq. ft.">2,000-2,500 sq. ft.</option>
+            <option value="2,500 sq. ft. or above">2,500 sq. ft. or above</option>
+        </select>
+
+        <p>10. How many bedrooms does your home have?</p>
+        <select name="num_bedrooms">
+            <option value="1 bedroom">1 bedroom</option>
+            <option value="2 bedrooms">2 bedrooms</option>
+            <option value="3 bedrooms">3 bedrooms</option>
+            <option value="4 bedrooms">4 bedrooms</option>
+            <option value="5 bedrooms or more">5 bedrooms or more</option>
+        </select>
+
+        <p>11. Do you own any energy-efficient appliances in your home?</p>
+        <select name="energy_efficient_appliances">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <p>12. Are you interested in incorporating renewable energy sources (such as solar panels) into your home?</p>
+        <select name="interest_in_renewable_energy">
+            <option value="Yes, very interested">Yes, very interested</option>
+            <option value="Somewhat interested">Somewhat interested</option>
+            <option value="Not interested">Not interested</option>
+        </select>
+
+        <p>13. Have you ever received any financial assistance or grants for home improvements?</p>
+        <select name="financial_assistance_for_home_improvements">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <p>14. How would you describe your neighborhood's access to public transportation?</p>
+        <select name="awareness_of_community_programs">
+            <option value="Excellent">Excellent</option>
+            <option value="Good">Good</option>
+            <option value="Fair">Fair</option>
+            <option value="Poor">Poor</option>
+            <option value="No public transportation available">No public transportation available</option>
+        </select>
+
+        <!-- Home Remodeling and Renovations -->
+        <h2>Home Remodeling and Renovations</h2>
+        <p>1. Have you previously undertaken any home remodeling or renovation projects?</p>
+        <select name="home_remodeling_completed">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <p>2. If yes, what types of remodeling or renovation projects have you completed? (Select all that apply)</p>
+        <select name="remodeling_projects_completed" multiple>
+            <option value="Kitchen renovation">Kitchen renovation</option>
+            <option value="Bathroom renovation">Bathroom renovation</option>
+            <option value="Basement finishing">Basement finishing</option>
+            <option value="Roof replacement">Roof replacement</option>
+            <option value="Flooring replacement">Flooring replacement</option>
+            <option value="Window replacement">Window replacement</option>
+            <option value="Other">Other (specify)</option>
+        </select>
+
+        <p>3. Are you currently planning or considering any home remodeling or renovation projects?</p>
+        <select name="planning_home_remodeling">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Unsure">Unsure</option>
+        </select>
+
+        <p>4. What factors would influence your decision to pursue a home remodeling or renovation project? (Select all that apply)</p>
+        <select name="factors_influencing_remodeling_decision" multiple>
+            <option value="Cost">Cost</option>
+            <option value="Energy efficiency improvements">Energy efficiency improvements</option>
+            <option value="Improved aesthetics">Improved aesthetics</option>
+            <option value="Increased home value">Increased home value</option>
+            <option value="Enhanced functionality">Enhanced functionality</option>
+            <option value="Access to financing options">Access to financing options</option>
+            <option value="Other">Other (specify)</option>
+        </select>
+
+        <p>5. Are you aware of any local programs or incentives that support home remodeling or renovation projects?</p>
+        <select name="awareness_of_local_programs">
+            <option value="Yes, I am aware">Yes, I am aware</option>
+            <option value="No, I am not aware">No, I am not aware</option>
+        </select>
+
+        <!-- Renewable Energy and Home Energy Efficiency -->
+        <h2>Renewable Energy and Home Energy Efficiency</h2>
+        <p>1. Are you interested in installing renewable energy systems in your home? (e.g., solar panels)</p>
+        <select name="interest_in_installing_renewable_energy">
+            <option value="Yes, very interested">Yes, very interested</option>
+            <option value="Somewhat interested">Somewhat interested</option>
+            <option value="Not interested">Not interested</option>
+        </select>
+
+        <p>2. What factors would motivate you to adopt renewable energy technologies? (Select all that apply)</p>
+        <select name="motivations_for_adopting_renewable_energy" multiple>
+            <option value="Cost savings on energy bills">Cost savings on energy bills</option>
+            <option value="Environmental benefits">Environmental benefits</option>
+            <option value="Energy independence">Energy independence</option>
+            <option value="Availability of government incentives or rebates">Availability of government incentives or rebates</option>
+            <option value="Increased home value">Increased home value</option>
+            <option value="Other">Other (specify)</option>
+        </select>
+
+        <p>3. Are you familiar with different renewable energy options available for residential use? (e.g., solar, wind, geothermal)</p>
+        <select name="familiarity_with_renewable_energy_options">
+            <option value="Yes, I am familiar">Yes, I am familiar</option>
+            <option value="No, I am not familiar">No, I am not familiar</option>
+        </select>
+
+        <p>4. What concerns or barriers do you have regarding the adoption of renewable energy technologies? (Select all that apply)</p>
+        <select name="concerns_or_barriers_to_renewable_energy" multiple>
+            <option value="High upfront costs">High upfront costs</option>
+            <option value="Lack of information or understanding">Lack of information or understanding</option>
+            <option value="Insufficient space for installation">Insufficient space for installation</option>
+            <option value="Homeowner association restrictions">Homeowner association restrictions</option>
+            <option value="Maintenance and repair requirements">Maintenance and repair requirements</option>
+            <option value="Other">Other (specify)</option>
+        </select>
+
+        <p>5. Are you interested in receiving a home energy audit or assessment to identify areas for energy efficiency improvements?</p>
+        <select name="interest_in_home_energy_audit">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Unsure">Unsure</option>
+        </select>
+
+        <p>6. What specific energy efficiency upgrades or measures are you most interested in? (Select all that apply)</p>
+        <select name="energy_efficiency_upgrades" multiple>
+            <option value="Insulation improvements">Insulation improvements</option>
+            <option value="Energy-efficient lighting">Energy-efficient lighting</option>
+            <option value="Upgrading HVAC systems">Upgrading HVAC systems</option>
+            <option value="Smart thermostats">Smart thermostats</option>
+            <option value="Energy-efficient appliances">Energy-efficient appliances</option>
+            <option value="Other">Other (specify)</option>
+        </select>
+
+        <p>7. Would you be interested in attending workshops or educational sessions on energy-saving practices and technologies?</p>
+        <select name="interest_in_energy_saving_workshops">
+            <option value="Yes, very interested">Yes, very interested</option>
+            <option value="Somewhat interested">Somewhat interested</option>
+            <option value="Not interested">Not interested</option>
+        </select>
+
+        <!-- Financial Assistance and Financing Options -->
+        <h2>Financial Assistance and Financing Options</h2>
+        <p>1. Would you be interested in learning about financial assistance programs or grants available for home improvements and clean energy initiatives?</p>
+        <select name="interest_in_financial_assistance_programs">
+            <option value="Yes, very interested">Yes, very interested</option>
+            <option value="Somewhat interested">Somewhat interested</option>
+            <option value="Not interested">Not interested</option>
+        </select>
+
+        <p>2. Have you encountered challenges in obtaining financing for home remodeling or energy-related projects?</p>
+        <select name="challenges_in_obtaining_financing">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Not applicable">Not applicable</option>
+        </select>
+
+        <p>3. Would you benefit from guidance or support in navigating the process of applying for loans or financial assistance programs?</p>
+        <select name="guidance_for_applying_for_loans">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Not applicable">Not applicable</option>
+        </select>
+
+        <!-- Home Safety and Security -->
+        <h2>Home Safety and Security</h2>
+        <p>1. Do you have concerns about home safety and security in your neighborhood?</p>
+        <select name="concerns_about_home_safety_and_security">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            <option value="Unsure">Unsure</option>
+        </select>
